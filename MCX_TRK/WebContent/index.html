@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>File Uploading Form</title>
+      <link rel="stylesheet" href="css/bootstrap.css">
+	<style type="text/css">
+	.navbar{background:#1D3D70; padding:10px 0}
+	.navbar h2{color: #fff;	font-size: 24px;font-weight: bold;	text-align: center;}
+	.uploadForm {	background: none repeat scroll 0 center #efefef;	border: 1px solid #ddd;	margin: 60px auto auto;	padding: 25px;	width: 600px;	}
+	.inputfile {	height: 0.1px;	opacity: 0;	overflow: hidden;	position: absolute;	width: 0.1px;	z-index: -1;	} 
+	.inputfile-6 + label {	color: #1D3D70;	}
+	.inputfile-6 + label {	border: 1px solid #1d3d70;	background-color: #fff;	padding: 0;	}
+	.inputfile-6:focus + label,	.inputfile-6.has-focus + label,	.inputfile-6 + label:hover {	border-color: #1d3d70;	}
+	.inputfile-6 + label span,	.inputfile-6 + label strong {	padding: 0.625rem 1.25rem;	/* 10px 20px */	}
+	.inputfile-6 + label span {	width: 200px;	min-height: 2em;	display: inline-block;	text-overflow: ellipsis;	white-space: nowrap;
+	overflow: hidden;	vertical-align: top;	}
+	.inputfile-6 + label strong {
+	height: 100%;
+	color: #f1e5e6;
+	background-color:  #1d3d70;
+	display: inline-block;
+	}
+	.inputfile-6:focus + label strong,
+	.inputfile-6.has-focus + label strong,
+	.inputfile-6 + label:hover strong {
+	background-color: #154592;
+	}
+	.downloadBtn {
+	background: none repeat scroll 0 0 #5e5c65;
+	border: medium none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 22px;
+	margin-left: 10px;
+	padding: 7px 10px;
+	}
+	</style>
+   </head>
+   <body>
+      <nav class="navbar navbar-default">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-3"><img src="img/qentelli-logo.png"/></div>
+               <div class="col-md-6">
+                  <h2>TRK - Transaction Reference Key</h2>
+               </div>
+               <div class="col-md-3 text-right"><img src="img/mcx-logo.png"/></div>
+            </div>
+      </nav>
+      </div>
+      <form action="generatetrk" method="post" class="uploadForm"
+         enctype="multipart/form-data">
+         <div class="box">
+            <input type="file" name="file" id="file" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple />
+            <label for="file"><span></span> <strong> Choose a file&hellip;</strong></label>
+            <input type="submit" value="Download File" class="downloadBtn" />
+         </div>
+      </form>
+      <script src="js/custom-file-input.js"></script>
+   </body>
+</html>
